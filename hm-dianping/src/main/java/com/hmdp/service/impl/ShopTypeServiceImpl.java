@@ -27,6 +27,12 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     * @return com.hmdp.dto.Result
+     * @description 首页商铺分类页面展示缓存到redis中
+     * @author MXK
+     * @date 2023/3/5 01:22
+     */
     @Override
     public Result queryAll() {
 
