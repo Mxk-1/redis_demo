@@ -19,4 +19,6 @@ public interface IShopService extends IService<Shop> {
 
     @Transactional
     Result update(Shop shop);
+
+    void saveShop2Redis(Long id, Long expireSeconds);
 }

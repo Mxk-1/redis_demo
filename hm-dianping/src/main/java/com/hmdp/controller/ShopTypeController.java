@@ -25,11 +25,21 @@ public class ShopTypeController {
     @Resource
     private IShopTypeService typeService;
 
+    /**
+     * @return com.hmdp.dto.Result
+     * @description 首页获取店铺分类
+     * @author MXK
+     * @date 2023/3/6 16:50
+     */
+/*     @GetMapping("list")
+    public Result queryTypeList() {
+        List<ShopType> typeList = typeService.query().orderByAsc("sort").list();
+        return Result.ok(typeList);
+    } */
     @GetMapping("list")
     public Result queryTypeList() {
-/*         List<ShopType> typeList = typeService
-                .query().orderByAsc("sort").list();
-        return Result.ok(typeList); */
-        return typeService.queryAll();
+        return typeService.getList();
     }
+
+
 }
