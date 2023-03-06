@@ -1,0 +1,23 @@
+### 测试修改数据
+PUT localhost:8081/shop
+Content-Type: application/json
+
+{
+  "area": "大关",
+  "openHours": "10:00-22:00",
+  "sold": 4215,
+  "images": "https://qcloud.dpfile.com/pc/jiclIsCKmOI2arxKN1Uf0Hx3PucIJH8q0QSz-Z8llzcN56-_QiKuOvyio1OOxsRtFoXqu0G3iT2T27qat3WhLVEuLYk00OmSS1IdNpm8K8sG4JN9RIm2mTKcbLtc2o2vfCF2ubeXzk49OsGrXt_KYDCngOyCwZK-s3fqawWswzk.jpg,https://qcloud.dpfile.com/pc/IOf6VX3qaBgFXFVgp75w-KKJmWZjFc8GXDU8g9bQC6YGCpAmG00QbfT4vCCBj7njuzFvxlbkWx5uwqY2qcjixFEuLYk00OmSS1IdNpm8K8sG4JN9RIm2mTKcbLtc2o2vmIU_8ZGOT1OjpJmLxG6urQ.jpg",
+  "address": "锦昌文华苑29号",
+  "comments": 3035,
+  "avgPrice": 80,
+  "score": 37,
+  "name": "mxk_茶餐厅",
+  "x": 120.149192,
+  "y": 30.316078,
+  "typeId": 1,
+  "id": 1
+}
+
+
+### 测试缓存穿透情况，数据库（redis+mysql）不存在
+GET localhost:8081/api/shop/0

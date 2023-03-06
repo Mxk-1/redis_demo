@@ -1,9 +1,6 @@
 package com.hmdp.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -13,7 +10,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author 虎哥
@@ -95,12 +92,16 @@ public class Shop implements Serializable {
 
     /**
      * 创建时间
+     * 设置了自动创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
     /**
      * 更新时间
+     * 设置了自动更新时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime updateTime;
 
 
